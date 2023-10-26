@@ -13,6 +13,10 @@ app.post('/webhook', (req, res) => {
   res.status(200).json({ message: 'Event received.' });
 });
 
+app.get('/health-check',(req,res)=>{
+res.status(200).json({message:'application is running successfully.'})
+})
+
 app.listen(3000, () => {
   console.log('application listening on port 3000');
 });
